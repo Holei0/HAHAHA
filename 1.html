@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜數字</title>
+    <link rel='stylesheet' href='1.css'>
+</head>
+<body>
+    <h1>金幣有獎競猜</h1>
+    <div class='text_1'>
+        <b>前情提要：</b> 今天，旅行中阿拉丁的精靈到了在史高治叔叔的金庫裏，而且跟正在金幣池裏游泳的史高治叔叔(超有錢的守財奴)開了一個玩笑。拿走了一把金幣！！<br>
+        請問精靈拿走了幾枚金幣（範圍在1~100之間）？你一共有10次競猜機會，答對了金幣就歸你了。（史高治叔叔是不會讓這種事情發生的）
+    </div>
+
+    <div class="form">
+        <label for="guessField">請輸入你的答案：</label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="提交答案" class="guessSubmit" >
+    </div>
+
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+        <img id="GIF">
+    </div>
+    
+
+    </div>
+    <script src="1.js"></script>
+
+</body>
+</html>
