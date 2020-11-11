@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML &lt;FORM&gt; 表單測試 for PHP / Python</title>
+    <meta charset="utf-8" />
+
+    <style>
+      div {
+        margin: 30px 20px;
+      }
+
+      div > b {
+        display: block;
+      }
+
+      div > label:hover {
+        color: #3399ff;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      select,
+      input[type="text"],
+      input[type="password"],
+      textarea {
+        padding: 5px 10px;
+        font-size: 12pt;
+      }
+
+      input[type="text"]:hover,
+      input[type="password"]:hover,
+      textarea:hover {
+        background-color: #ffffee;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 10px 30px;
+        margin-right: 20px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #6699ff;
+        color: #ffffff;
+      }
+
+      .form-settings {
+        display: flex;
+      }
+
+      input[type="checkbox"],
+      input[type="radio"] {
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+
+    <script>
+    // 
+    window.onload = function (e) {
+      selectUrlInit();
+      methodModeInit();
+      enctypeModeInit();
+      formInit();
+    };
+
+    // 
+    function selectUrlInit(e) {
+      let elmActionUrl = document.querySelector('select[name="actionUrl"]');
+      if (elmActionUrl === null) {
+        console.error('select[name="actionUrl"] is null');
+        return;
+      }
+
+      elmActionUrl.onchange = function (e) {
+        let actionUrl = this.options[this.selectedIndex].value;
+        this.form.action = actionUrl;
+      };
+
+      elmActionUrl.onchange();
+    }
+
+    // 
+    function methodModeInit(e) {
+      let elmMethodMode = document.querySelector('select[name="methodMode"]');
+      if (elmMethodMode === null) {
+        console.error('select[name="methodMode"] is null');
+        return;
+      }
+
+      elmMethodMode.onchange = function (e) {
+        let methodMode = this.options[this.selectedIndex].value;
+        this.form.method = methodMode;
+      };
+
+      elmMethodMode.onchange();
+    }
+
+    // 
+    function enctypeModeInit(e) {
+      let elmEnctypeMode = document.querySelector('select[name="enctypeMode"]');
+      if (elmEnctypeMode === null) {
+        console.error('select[name="enctypeMode"] is null');
+        return;
+      }
+
+      elmEnctypeMode.onchange = function (e) {
+        let enctypeMode = this.options[this.selectedIndex].value;
+        this.form.enctype = enctypeMode;
+      };
+
+      elmEnctypeMode.onchange();
+    }
+
+    // 
+    function formInit(e) {
+      this.form.onsubmit = function (e1) {
+        alert(`action: ${this.form.action}\n`);
+        return false;
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <h1>HTML &lt;FORM&gt; 表單測試 for PHP / Python</h1>
+
+    <form
+      target="_blank"
+      method="GET"
+      enctype="application/x-www-form-urlencoded"
+      action="process.php"
+    >
+
+      <section class="form-settings">
+          <div>
+            <b>後端處理程式</b>
+            <select name="actionUrl">
+              <option value="process.php" selected>PHP</option>
+              <option value="process.py">Python</option>
+            </select>
+          </div>
+          <div>
+            <b>傳送方法</b>
+            <select name="methodMode">
+              <option value="GET" selected>GET</option>
+              <option value="POST">POST</option>
+            </select>
+          </div>
+          <div>
+            <b>資料編碼模式</b>
+            <select name="enctypeMode">
+              <option value="application/x-www-form-urlencoded" selected>網址參數編碼 application/x-www-form-urlencoded</option>
+              <option value="multipart/form-data">資料封裝 multipart/form-data</option>
+            </select>
+          </div>
+          <div>
+            <b>列印伺服端環境變數</b>
+            <input type="checkbox" name="isPrintEnv">
+          </div>
+      </section>
+
+
+      <hr>
+
+      <div>
+        <b>帳號:</b>
+        <input type="text" name="account" placeholder="請輸入帳號" />
+      </div>
+
+      <div>
+        <b>密碼:</b>
+        <input type="password" name="password" placeholder="請輸入密碼" />
+      </div>
+
+      <div>
+        <b>性別:</b>
+        <label>
+          <input type="radio" name="sex" value="male" />
+          男
+        </label>
+        <label>
+          <input type="radio" name="sex" value="female" />
+          女
+        </label>
+      </div>
+
+      <div>
+        <b>喜好:</b>
+        <label>
+          <input type="checkbox" name="faverites[]" value="Book" />
+          書
+        </label>
+        <label>
+          <input type="checkbox" name="faverites[]" value="Music" />
+          音樂
+        </label>
+        <label>
+          <input type="checkbox" name="faverites[]" value="Shopping" />
+          購物
+        </label>
+        <label>
+          <input type="checkbox" name="faverites[]" value="Movie" />
+          電影
+        </label>
+        <label>
+          <input type="checkbox" name="faverites[]" value="KTV" />
+          唱歌
+        </label>
+        <label>
+          <input type="checkbox" name="faverites[]" value="Daze" />
+          發呆
+        </label>
+      </div>
+
+      <div>
+        <b>留言:</b>
+        <textarea
+          name="message"
+          rows="10"
+          cols="30"
+          placeholder="請輸入訊息"
+        ></textarea>
+      </div>
+
+      <div>
+        <b>大頭照: (單檔上傳)</b>
+        <input type="file" name="face-photo" />
+      </div>
+
+      <div>
+        <b>其他檔案: (多檔上傳)</b>
+        <input type="file" name="other-files[]" multiple /><br />
+      </div>
+
+      <hr />
+
+      <div>
+        <input type="submit" value="送出" />
+        <input type="reset" value="重填" />
+      </div>
+    </form>
+  </body>
+</html>

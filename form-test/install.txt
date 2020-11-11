@@ -1,0 +1,42 @@
+form-test 安裝到 Apache
+==================================================================
+
+1. 將 form-test 資料夾複製到 C:\xampp\htdocs 下
+2. 在 XAMPP Control Panel 的 Apache Module 項目
+   2-1. 按下 Config 鈕
+   2-2. 選擇 Apache (httpd-xampp.conf)
+   2-3. 透過預設指定的文字編輯器載入 httpd-xampp.conf 檔案
+3. 找到 <IfModule alias_module> ...... </IfModule> 區塊
+4. 將下列設定，複製並貼入其中（</IfModule>之前）
+
+
+
+    # --- HTML Form Test ------------------------------------------------
+	
+    Alias /form-test "D:/VS_Code_Practice/form-test"
+    #D:/temp/php/form-test/
+    <Directory "D:/VS_Code_Practice/form-test">
+    #D:/temp/php/form-test/
+        Require all granted
+        Options ExecCGI
+        AllowOverride All
+    </Directory>
+
+
+
+5. 儲存 httpd-xampp.conf
+6. 在 XAMPP Control Panel 的 Apache Module 項目
+   6-1. 按下 Config 鈕
+   6-2. 選擇 Apache (httpd.conf)
+   6-3. 透過預設指定的文字編輯器載入 httpd.conf 檔案
+7. 找到 AddHandler 參數，加入 .py 檔案格式
+8. 在 XAMPP Control Panel 的 Apache Module 項目
+   6-1. 按下 Stop 鈕
+　 6-2. 按下 Start 鈕
+   6-3. 讓 Aapche 服務器重新啟動，以順利重載 httpd-xampp.conf
+9. 完成 form-test 的安裝
+10. 開啟 Chrome 瀏覽器
+   10-1. 網址列輸入 http://127.0.0.1/form-test 或是 http://localhost/form-test
+   ※ localhost = 127.0.0.1
+
+
