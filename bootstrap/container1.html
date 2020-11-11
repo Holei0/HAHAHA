@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+
+
+    <div class="container">.container</div>
+    <div class="container-sm">.container-sm</div>
+    <div class="container-md">.container-md</div>
+    <div class="container-lg">.container-lg</div>
+    <div class="container-xl">.container-xl</div>
+    <div class="container-fluid">.container-fluid</div>
+
+    <h1>  &copy; 2020 Benson copyright all right reserved</h1>
+    <style>
+        div{
+            border: solid 1px red;
+        };
+
+/*  媒體過濾器 ，如果沒有設定，一率就包含全部*/
+        @media screen {
+            h1{
+                display: none;
+            }
+        }
+
+        @media print{
+            h1{
+                display: block;
+            }
+        }
+
+        /*做螢幕縮放，做不同的效果*/
+        /*max-width: max   由大到小，但是 [不可以] 和 [min-width] 混合用*/
+        .container {
+            background-color: royalblue;
+        }
+        @media (max-width:1200px){
+            .container{
+                background-color: green;
+            }
+        }
+        @media (max-width:800px){
+            .container{
+                background-color: pink;
+            }
+        }
+    </style>
+
+
+
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
