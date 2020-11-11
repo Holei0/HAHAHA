@@ -1,0 +1,33 @@
+/* 標題區 TOP */
+.layout-top{
+    background-image:url(images/0401.jpg);
+    background-repeat:repeat-x;
+    height:120px;
+    text-align: center;
+    line-height:120px;
+    /* 只能有一行 */
+    vertical-align: middle;
+    /* 垂直對齊只適用於table的形式 */
+    font-size: 52px;
+    font-family: '標楷體';
+    color: #ffffff;
+    text-shadow: #333333 10px 10px 15px;
+
+}
+.layout-top > a{
+    border:solid red 2px;
+    display: block;
+    height:120px;
+    line-height: 120px;
+    /* display:table-cell;
+    height:120px;
+    width:1024px;
+    vertical-align: middle; 不建議使用*/
+    font-size: 52px;
+    font-family: '標楷體';
+    color: #ffffff;
+    text-shadow: #333333 10px 10px 15px;
+    text-decoration: none;
+    /* 去除底線 */
+    
+}

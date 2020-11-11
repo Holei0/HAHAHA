@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURCHASE</title>
+    <!-- CSS設定 -->
+    <link rel='stylesheet' href='../style.css'>
+    <!-- JS -->
+    <script src='../script.js'></script>
+</head>
+<body>
+<marquee>
+    <!-- behavior="" direction='' direction是跑馬燈的方向,預設是從左往右 -->
+    大家來購物網!精品商品特價大拍賣!要買要快!
+</marquee>
+<form>
+    <table class='layout-purchase'>
+        <tbody>
+            <tr>
+                <td>真皮皮包</td>
+                <td>真皮短夾</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src='../images/0403.jpg' alt="0403.jpg">
+                </td>
+                <td>
+                    <img src='../images/0404.jpg' alt="0404.jpg">
+                </td>
+            </tr>
+            <!-- <form> -->
+            <tr>
+                <td>
+                    <!-- <form> -->
+                    <input type='radio' name='preference'value='購買'checked>購買
+                    <input type='radio' name='preference'value="不購買">不購買
+                    <input type='radio'name='preference'value='考慮中' >考慮中
+                    <!-- </form> -->
+                </td>
+                <td>
+                    <!-- <form> -->
+                <input type='radio'name='preference2'value='購買'>購買
+                <input type='radio'name='preference2'value="不購買">不購買
+                <input type='radio' name='preference2'value='考慮中'checked>考慮中
+                <!-- </form>            -->
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    <label>
+                        <input type="radio" name='buy' value='購買'>購買
+                    </label>
+                    <label>
+                        <input type="radio" name='buy' value='不購買'>不購買
+                    </label>
+                    <label> 擴大範圍，點選label内的所有内容都可以被選中
+                        <input type="radio" name='buy' value='考慮中'checked>考慮中
+                        若所有的都加了checked，最後一個的checked會覆蓋前面的功能
+                    </label>
+                </td>
+            </tr> -->
+        </tbody>
+    </table>
+    <p class='layout-p'>
+        <input id='btnSubmit' type='button' value='送出'>
+        <input type='reset' value='重置'>
+    </p>
+    <!-- <div class='buy-controller'>
+    <input type='submit' value='送出' class='bnt'>
+    <input type='reset' value='重置' class='bnt'>
+    </div> -->
+</form>
+
+</body>
+</html>

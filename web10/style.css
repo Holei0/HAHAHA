@@ -1,0 +1,303 @@
+
+.layout-main{
+    width:1024px;
+    height:768px;
+    margin:0 auto;
+    border:solid black 1 px;
+    border-spacing:0px;
+    padding:0px;
+}
+
+/* 標題區 TOP */
+.layout-top{
+    height:120px;
+    _border:solid 1px black;
+}
+
+/* 跑馬燈區 MARGUEE */
+.layout-marquee{
+    height:30px;
+    _border:solid 1px black;
+    background-image: url('images/0402.jpg');
+}
+
+/* 内容區 */
+.layout-content{
+    height:auto;
+    _border:solid 1px black;
+    background-image: url('images/0402.jpg');
+}
+
+/* 版權頁尾區 FOOTER */
+.layout-footer{
+    height:78px;
+    _border:solid 1px black;
+    background-color: #666600;
+    color: #FFFFFF;
+    font-family: '標楷體';
+    line-height: 2em;
+    _line-height:200%;
+    text-align: left;
+}
+
+/* .layout-main:可以覆蓋原有的,但是基礎設定要放在最前面 */
+.layout-top,
+.layout-marquee,
+.layout-content,
+.layout-footer{
+    border:solid 1px grey;
+    /* 第二種寫法,方便統一更改,限統一設定 */
+}
+
+/* -------------------------------------------------------- */
+
+/* 標題區 TOP */
+.layout-top > a{
+    background-image:url(images/0401.jpg);
+    background-repeat:repeat-x;
+    text-align: center;
+    _line-height:120px;
+    _border:solid red 2px;
+    display: block;
+    height:120px;
+    line-height: 120px;
+    font-size: 52px;
+    font-family: '標楷體';
+    color: #ffffff;
+    text-shadow: #333333 10px 10px 15px;
+    text-decoration: none;
+    
+}
+
+/* 跑馬燈區 MARQUEE */
+marquee{
+    color:#0000ff;
+    font-size:19px;
+    height:30px;
+    line-height:30px;
+    font-family: '標楷體';
+}
+/* 產品列表 */
+.layout-products{
+    border-spacing:0px;
+    padding:0px;
+    margin: 0 auto;
+
+}
+
+/* 產品列的表邊框設定 */
+.layout-products,
+.layout-products td{
+    border:solid 1px gray;
+    _text-align: center;
+}
+
+/* 產品列表的欄位寬度設定 */
+/*寫法一 
+.layout-products > tbody > tr > td:nth-of-type(1){
+    width:200px;
+}
+.layout-products > tbody > tr > td:nth-of-type(2),
+.layout-products > tbody > tr > td:nth-of-type(3){
+    width:300px;
+} */
+/*寫法二 
+.layout-products > tbody > tr > td{
+    width:300px;
+}
+.layout-products > tbody > tr > td:nth-of-type(1){
+    width:200px;
+} */
+.layout-products > tbody > tr > td:nth-of-type(1){
+    width: 200px;
+}
+.layout-products > tbody > tr > td:not(nth-of-type(1)) {
+    width: 300px;
+}
+
+/* 產品列表的圖片高度設定 */
+.layout-products img{
+    height:150px;
+}
+/* 產品列表的圖片與文字的水平對齊 */
+.layout-products td{
+    text-align: center;
+    /* 方法二,獨立出來 */
+}
+
+/* 訪客留言版超鏈接 */
+.layout-footer >a{
+    color:#FFFFFF;
+    font-family: '標楷體';
+    _line-height: 2*78px;
+    text-align:left;
+    text-decoration:none;
+}
+.layout-footer >a:link{
+    color: #FFFFFF;
+}
+/*未訪問過的超鏈接 
+.layout-footer >a:unlink{
+    color: #FFFFFF;
+} */
+/* 已訪問過的超鏈接 */
+.layout-footer >a:visited {
+    color:#FF9999;
+    }
+
+.layout-purchase {
+    background-color: #FFFF99;
+    border-spacing:0px;
+    padding:0px;
+    margin: 0px auto;
+    border:solid 1px black;
+}
+
+/* .layout-purchase > tbody > tr >td{
+    height: 100px;
+} */
+
+.layout-purchase > tbody > tr > td:nth-of-type(2){
+    height:150px;
+    _width: 400px;
+
+}
+.layout-purchase > tbody > tr > td:not(nth-of-type(2)){
+    height:100px;
+    _width: 400px;
+}
+
+.layout-purchase > tbody > tr > td{
+    width: 400px;
+}
+
+/* 產品列表的圖片寬度設定 */
+.layout-purchase img{
+    height:150px;
+}
+/* .layout-purchase > tbody > tr:nth-of-type(2) > td >img{
+    height: 150px;
+} */
+/* 若圖片大小要求不一
+1.盡量不要運用
+.layout-purchase > tbody > tr > td:nth-of-type(1) > img{
+    height:150px;
+}
+2.在html中設定class
+.img1_class名稱{
+    height: 150;
+} */
+
+.layout-purchase,
+.layout-purchase td{
+    border:solid 1px black;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.layout-p{
+    text-align:center;
+}
+
+/* body{
+    text-align:center;
+
+} */
+
+/* .buy-controller{
+    margin: 20px auto;
+    margin-top: 20px auto; 針對外間距上方的設定
+    text-align: center;
+} */
+
+
+.layout-leather,
+.layout-leather pre{
+    background-color: #ffff99;
+    text-align: center;
+    border-spacing:0px;
+    padding:0px;
+    margin: 0 auto;
+    color: #0000FF;
+    font-family: '標楷體';
+    font-size: 24px;
+}
+/* .leather1{
+    background-color: #ffff99;
+    text-align:center;
+    color:#0000ff;
+    font-family: '標楷體';
+    font-size: 24px;
+} 
+.leather1 pre{
+    font-family: '標楷體';
+}*/
+
+
+
+.layout-message-1 >tbody > tr > td:nth-of-type(odd),
+.layout-message-2 >tbody > tr > td:nth-of-type(odd){
+    width: 150px;
+}
+.layout-message-1 > tbody > tr > td:nth-of-type(even),
+.layout-message-2 > tbody > tr > td:nth-of-type(even){
+    width: 350px;
+}
+.layout-message-1{
+    background-color: #ffdddd;
+    min-height: 32px;
+}
+
+.layout-message-2{
+    background-color: #ffff99;
+    min-height: 32px;
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+.layout-message-1,
+.layout-message-1 td,
+.layout-message-2,
+.layout-message-2 td{
+    border: solid 1px black;
+    border-collapse: collapse;
+    vertical-align: middle;
+    text-align: center;
+    border-spacing:0px;
+    padding:0px;
+    margin: 0 auto;
+}
+.layout-message-2 > tbody > tr > td:nth-of-type(even){
+    text-align: left;
+}
+
+/* 
+.message-table,
+.message-table td{
+    background-color: #ffdddd;
+    border:solid 1px black;
+    border-spacing: 0px;
+    margin:0px auto;
+}
+.message-table >tbody >tr:first-child>td:first-child{
+    width:150px;
+}
+
+.message-table >tbody >tr:first-child>td:last-child{
+    width:350px;
+}
+
+.message-table td{
+    height: 32px;
+    text-align: center;
+}
+
+.bgcolor-yellow td{
+    background-color: #FFFF99;
+} 
+.bgcolor >tbody >tr >td:last-child{
+    text-align:left;
+}
+.message-table{
+    margin-bottom:20px;
+} */
+

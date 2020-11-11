@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESSAGE</title>
+    <!-- CSS樣式設定檔 -->
+    <link rel='stylesheet' href='../style.css'>
+    <script src='../script1.js'></script>
+</head>
+<body>
+    <marquee>
+        <!-- behavior="" direction='' direction是跑馬燈的方向,預設是從左往右 -->
+        大家來購物網!精品商品特價大拍賣!要買要快!
+    </marquee>
+    <form>
+        <table class='layout-message-1'>
+            <tbody>
+                <tr>
+                    <td>公司名稱</td>
+                    <td>大家來購物有限公司</td>
+                </tr>
+                <tr>
+                    <td>公司電子信箱</td>
+                    <td>service@test.labor.gov.tw</td>
+                </tr>
+                <tr>
+                    <td>服務項目</td>
+                    <td>網路購物服務</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class='layout-message-2'>
+            <tbody>
+                <tr>
+                    <td>服務項目</td>
+                    <td>
+                        <input type='text' name='clientname' size='20'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>電子信箱</td>
+                    <td>
+                        <input type='email' name='email' size='30'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>意見留言</td>
+                    <td>
+                        <textarea name='advice' rows='5' cols='30'></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class='layout-p'>
+            <input id='btnSubmit' type='button' value='送出'>
+            <!-- btnSubmit →btnMessageSubmit -->
+            <input type='reset' value='重置'>
+        </p>
+    </form>
+</body>
+</html>
