@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI体脂率计算机</title>
+    <script src="./BMI.js"></script>
+    <style>
+        /* CSS */
+        /* 过轻 */
+        .color-1{
+            background-color: #2facff;
+        }
+        /* 标准 */
+        .color-2{
+            background-color: #2bb92b;
+        }
+        /* 过重 */
+        .color-3{
+            background-color: yellow;
+        }
+        /* 肥胖 */
+        .color-4{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>BMI体脂率计算机</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    体重：<input type="text" id="weight" placeholder="kg">kg
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    身高：<input type="text" id="height" placeholder="cm">cm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    BMI值：<span id="bmi">0</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="message">未知</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="btnCompute">计算</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

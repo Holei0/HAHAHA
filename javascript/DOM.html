@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="DOM.js"></script>
+</head>
+<body>
+    
+
+
+    <ol>
+        <li>
+            <a href='#1' id='link-1'>Link 1</a>
+        </li>
+        <li>
+            <a href='#2' name='a-2'>Link 2</a>
+        </li>
+        <li>
+            <a href="#2" name='a-2'>Link 2-2</a>
+        </li>
+        <li>
+            <a href='#3'class='c-3'>Link 3</a>
+        </li>
+        <li>
+            <a href='#4'>Link 4</a>
+        </li>
+        <li>
+            <a href='#5'>Link 5</a>
+        </li>
+    </ol>
+
+    <br>
+    <button onclick="changeLink2();">
+        <!-- 'on'开头→事件属性 -->
+        Change Link 2
+    </button>
+    <br>
+    <button id="btn2">Change Link 2 By Dynamic Binding</button>
+</body>
+</html>
